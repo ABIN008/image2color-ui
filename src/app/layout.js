@@ -25,8 +25,8 @@ export const metadata = {
     "color blindness simulator",
   ],
   authors: [{ name: "Image2Color" }],
-  creator: "Image2Color",
-  metadataBase: new URL("https://image2color.com"),
+  creator: "Img2Color",
+  metadataBase: new URL("https://img2color.com"),
   alternates: {
     canonical: "/",
   },
@@ -34,14 +34,14 @@ export const metadata = {
     title: "Image2Color — Extract Color Codes from Any Image",
     description:
       "Free online tool to extract HEX, RGB, HSL and CMYK color codes from uploaded images. Generate palettes, check contrast, and more.",
-    url: "https://image2color.com",
-    siteName: "Image2Color",
+    url: "https://img2color.com",
+    siteName: "Img2Color",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Image2Color — Online Color Picker Tool",
+        alt: "Img2Color — Online Color Picker Tool",
       },
     ],
     type: "website",
@@ -49,7 +49,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Image2Color — Free Color Picker from Image",
+    title: "Img2Color — Free Color Picker from Image",
     description:
       "Pick colors from any image. Get HEX, RGB, HSL, CMYK instantly. Free online tool.",
     images: ["/og-image.jpg"],
@@ -85,8 +85,8 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Image2Color",
-              url: "https://image2color.com",
+              name: "Img2Color",
+              url: "https://img2color.com",
               description:
                 "Free online color picker tool. Extract HEX, RGB, HSL, CMYK values from any image. Generate color palettes and check WCAG contrast ratios.",
               applicationCategory: "DesignApplication",

@@ -119,7 +119,7 @@ export default function Footer() {
 
             {/* Brand */}
             <div className="footer-brand">
-              <div className="footer-brand-name">Image<span>2</span>Color</div>
+              <div className="footer-brand-name">Img<span>2</span>Color</div>
               <p>Free online color tools for designers and developers. Extract palettes, check contrast, generate gradients — all in your browser.</p>
               <a href="https://img2color.com" className="footer-site-link">
                 <i className="fa-solid fa-globe"></i> img2color.com
