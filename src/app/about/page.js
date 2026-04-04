@@ -52,11 +52,11 @@ export default function AboutPage() {
         <h1 className="mb-4 border-bottom pb-2">About Image2Color</h1>
 
         <p>
-          <strong>Image2Color</strong> is a free, easy-to-use online color
-          picker tool that allows you to extract color codes directly from any
-          image. Whether you're a web developer, graphic designer, digital
-          artist, or just color curious — this tool is made for you.
-        </p>
+  <strong>Img2Color</strong> is a free, easy-to-use online color
+  picker tool that allows you to extract color codes directly from any
+  image. Whether you&apos;re a web developer, graphic designer, digital
+  artist, or just color curious — this tool is made for you.
+</p>
 
         <section className="mt-4">
           <h5>🎯 What You Can Do</h5>
@@ -99,9 +99,9 @@ export default function AboutPage() {
         </section>
 
         <p className="mt-4">
-          💬 Have suggestions or bug reports? We'd love to hear from you!
-          Contact us anytime through our feedback page or social links.
-        </p>
+  💬 Have suggestions or bug reports? We&apos;d love to hear from you!
+  Contact us anytime through our feedback page or social links.
+</p>
       </div>
     </div>
   );
