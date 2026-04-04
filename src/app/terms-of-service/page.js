@@ -39,11 +39,11 @@ export default function TermsOfService() {
         <section className="mt-4">
           <h5>4. 🚫 No Warranties</h5>
           <p>
-            This service is provided "as is" without warranties of any kind. We
-            do not guarantee the accuracy, performance, or availability of the
-            service. We are not liable for any loss, damage, or inconvenience
-            caused by using this site.
-          </p>
+  This service is provided &quot;as is&quot; without warranties of any kind. We
+  do not guarantee the accuracy, performance, or availability of the
+  service. We are not liable for any loss, damage, or inconvenience
+  caused by using this site.
+</p>
         </section>
 
         <section className="mt-4">
