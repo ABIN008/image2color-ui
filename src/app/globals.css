@@ -1,11 +1,66 @@
+/* ─────────────────────────────────────────────
+   Image2Color — Global Styles
+   ───────────────────────────────────────────── */
+
 :root {
+  /* ── Existing vars ── */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* ── New tool vars ── */
+  --tool-bg: #fafafa;
+  --tool-text: #111111;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-border: #e8e8e8;
+  --nav-link: #444444;
+  --nav-link-hover-bg: #f0f0f5;
+  --nav-link-hover: #111111;
+  --nav-active-bg: #111111;
+  --dz-border: #d1d5db;
+  --dz-bg: #ffffff;
+  --dz-hover: #f5f3ff;
+  --dz-text: #6b7280;
+  --url-border: #e5e7eb;
+  --url-bg: #ffffff;
+  --url-input-bg: #fafafa;
+  --url-label: #888888;
+  --badge-bg: #f3f4f6;
+  --badge-text: #374151;
+  --label-color: #bbbbbb;
+  --canvas-border: #e5e7eb;
 }
 
 [data-theme="dark"] {
+  /* ── Existing vars ── */
   --background: #0a0a0a;
   --foreground: #ededed;
+
+  /* ── New tool vars ── */
+  --tool-bg: #0d0d12;
+  --tool-text: #e5e5e5;
+  --card-bg: #111118;
+  --card-border: #1e1e2e;
+  --nav-bg: rgba(15, 15, 20, 0.95);
+  --nav-border: #2a2a3a;
+  --nav-link: #bbbbbb;
+  --nav-link-hover-bg: #1e1e2e;
+  --nav-link-hover: #ffffff;
+  --nav-active-bg: #4f46e5;
+  --dz-border: #2a2a3a;
+  --dz-bg: #111118;
+  --dz-hover: #1a1a2e;
+  --dz-text: #777777;
+  --url-border: #2a2a3a;
+  --url-bg: #111118;
+  --url-input-bg: #0d0d12;
+  --url-label: #555555;
+  --badge-bg: #1e1e2e;
+  --badge-text: #aaaaaa;
+  --label-color: #555555;
+  --canvas-border: #2a2a3a;
+  color-scheme: dark;
 }
 
 [data-theme="light"] {
@@ -13,8 +68,17 @@
   --foreground: #171717;
 }
 
-html, body {
+/* ── Base reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
   height: 100%;
+  scroll-behavior: smooth;
+}
+
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -25,12 +89,15 @@ body {
   overflow-x: hidden;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* DM Sans loads from layout.js head link; falls back to Segoe/Arial */
+  font-family: 'DM Sans', 'Segoe UI', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
-  padding-top: 85px;
+  /* 68px = height of the new navbar. Change if your navbar differs */
+  padding-top: 68px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #__next {
@@ -39,59 +106,119 @@ body {
   min-height: 100vh;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 a {
   color: inherit;
   text-decoration: none;
 }
 
-.navbar.fixed-top {
+/* ── Navbar ── */
+/* Covers both Bootstrap's .fixed-top and our custom .i2c-navbar */
+.navbar.fixed-top,
+.i2c-navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2000;
-  background-color: #ffffff;
+  background-color: var(--nav-bg, #ffffff);
 }
 
+/* ── Bootstrap card overrides ── */
 .card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--card-border);
   border-radius: 8px;
-  background: var(--background);
+  background: var(--card-bg);
 }
 
+/* ── Bootstrap dark mode overrides ── */
 [data-theme="dark"] .card {
-  background: #1a1a1a;
-  border-color: #444;
+  background: #111118;
+  border-color: #1e1e2e;
 }
 
 [data-theme="dark"] .border {
-  border-color: #444 !important;
+  border-color: #2a2a3a !important;
 }
 
 [data-theme="dark"] .bg-light {
-  background-color: #2a2a2a !important;
+  background-color: #1a1a2e !important;
   color: #ededed;
 }
 
 [data-theme="dark"] input.form-control {
-  background-color: #2a2a2a;
+  background-color: #111118;
   color: #ededed;
-  border-color: #444;
+  border-color: #2a2a3a;
 }
 
 [data-theme="dark"] input.form-control:focus {
-  background-color: #333;
+  background-color: #1a1a2e;
   color: #ededed;
-  border-color: #666;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
 }
 
+[data-theme="dark"] .text-muted {
+  color: #666 !important;
+}
+
+[data-theme="dark"] .btn-light {
+  background: #1e1e2e;
+  border-color: #2a2a3a;
+  color: #aaa;
+}
+
+[data-theme="dark"] .btn-outline-dark {
+  border-color: #2a2a3a;
+  color: #aaa;
+}
+
+[data-theme="dark"] .btn-outline-dark:hover {
+  background: #1e1e2e;
+  color: #fff;
+}
+
+[data-theme="dark"] .btn-link {
+  color: #818cf8;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+[data-theme="dark"] ::-webkit-scrollbar-thumb { background: #2a2a3a; }
+
+/* ── Selection ── */
+::selection { background: #6366f1; color: #fff; }
+
+/* ── Focus ── */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* ── Responsive ── */
 @media (max-width: 768px) {
   .container-fluid {
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
+
+  body {
+    /* slightly taller on mobile if hamburger adds height */
+    padding-top: 68px;
+  }
+}
+
+/* ── Utility ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
