@@ -10,24 +10,13 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer
-      className="mt-5 py-4 text-center"
-      style={{ backgroundColor: "#222", color: "#fff" }}
-    >
+    <footer className="py-4 text-center border-top mt-auto" style={{ backgroundColor: "#222", color: "#fff" }}>
       <div className="container">
-        <p>
-          &copy; {year} <strong>Image2Color</strong> · All rights reserved.
-        </p>
-        <div className="d-flex justify-content-center gap-3">
-          <Link href="/about">
-            <span className="text-white">About</span>
-          </Link>
-          <Link href="/privacy-policy">
-            <span className="text-white">Privacy</span>
-          </Link>
-          <Link href="/terms-of-service">
-            <span className="text-white">Terms</span>
-          </Link>
+        <p className="mb-2">&copy; {year} <strong>Image2Color</strong> · All rights reserved.</p>
+        <div className="d-flex justify-content-center gap-4">
+          <Link href="/about" className="text-white text-decoration-none">About</Link>
+          <Link href="/privacy-policy" className="text-white text-decoration-none">Privacy</Link>
+          <Link href="/terms-of-service" className="text-white text-decoration-none">Terms</Link>
         </div>
       </div>
     </footer>
