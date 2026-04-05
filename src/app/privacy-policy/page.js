@@ -238,7 +238,7 @@ export default function PrivacyPolicy() {
         <div className="pp-contact">
           <div>
             <strong>Questions about your privacy?</strong>
-            <p>We're happy to answer — reach out any time.</p>
+            <p>We&apos;re happy to answer — reach out any time.</p>
           </div>
           <a className="pp-contact-btn" href="/contact">Contact Us →</a>
         </div>
