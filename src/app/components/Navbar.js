@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../../public/images/logo/LOGO23.png"; // same path as your original
+import logo from "../../../public/images/logo/LOGO24.png"; // same path as your original
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
