@@ -1,4 +1,3 @@
-// src/app/tools/contrast-checker/layout.js
 export const metadata = {
   title: "Color Contrast Checker — WCAG AA & AAA Ratio Tool",
   description:
