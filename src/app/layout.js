@@ -26,7 +26,7 @@ export const metadata = {
   ],
   authors: [{ name: "Image2Color" }],
   creator: "Img2Color",
-  metadataBase: new URL("https://img2color.com"),
+  metadataBase: new URL("https://www.img2color.com"),
   alternates: {
     canonical: "/",
   },
