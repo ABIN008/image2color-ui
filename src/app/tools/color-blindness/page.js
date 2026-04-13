@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect, useCallback } from "react";
-
+import JsonLd from "../../components/JsonLd";
 const TYPES = [
   {
     id: "normal",
@@ -419,6 +419,53 @@ export default function ColorBlindness() {
         </div>
 
       </div>
+      <JsonLd data={{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Color Blindness Simulator",
+  "url": "https://www.img2color.com/tools/color-blindness",
+  "description": "Simulate how images look to people with color blindness. Test for Deuteranopia, Protanopia, Tritanopia and more. Free online simulator.",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "mainEntityOfPage": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Deuteranopia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Deuteranopia is the most common form of color blindness, affecting the ability to distinguish green colors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Protanopia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Protanopia affects red cone cells, making it difficult to distinguish red from green. Reds appear very dark to people with protanopia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I make my design accessible for color blind users?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use sufficient contrast, never rely on color alone to convey information, add labels or patterns alongside color coding, and test your design using a color blindness simulator."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this simulator free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, completely free. Upload any image and instantly preview all color blindness types. No signup needed and your image never leaves your browser."
+        }
+      }
+    ]
+  }
+}} />
     </>
   );
 }

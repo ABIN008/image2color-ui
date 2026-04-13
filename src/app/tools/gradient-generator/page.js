@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import JsonLd from "../../components/JsonLd";
 export default function GradientGenerator() {
   const [type, setType] = useState("linear");
   const [angle, setAngle] = useState(135);
@@ -511,6 +511,53 @@ export default function GradientGenerator() {
         </div>
 
       </div>
+      <JsonLd data={{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CSS Gradient Generator",
+  "url": "https://www.img2color.com/tools/gradient-generator",
+  "description": "Generate beautiful CSS linear and radial gradients visually. Copy CSS code instantly. Free online gradient maker.",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "mainEntityOfPage": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a linear gradient in CSS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A linear gradient transitions between colors along a straight line at a given angle using the linear-gradient() CSS function."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a radial gradient in CSS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A radial gradient transitions colors outward from a central point in a circular or elliptical shape using the radial-gradient() CSS function."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many color stops can I add?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can add up to 5 color stops. Each stop has a color and a position from 0 to 100% that controls where that color appears in the gradient."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this gradient generator free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, completely free. No signup needed. Generate unlimited gradients and copy the CSS code instantly."
+        }
+      }
+    ]
+  }
+}} />
     </>
   );
 }

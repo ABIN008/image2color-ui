@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import JsonLd from "../../components/JsonLd";
 function hexToRgb(hex) {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
@@ -476,6 +476,54 @@ export default function CssConverter() {
         </div>
 
       </div>
+
+      <JsonLd data={{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CSS Color Converter",
+  "url": "https://www.img2color.com/tools/css-converter",
+  "description": "Convert any color between HEX, RGB, HSL, HSV and CMYK formats instantly. Free online CSS color converter.",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "mainEntityOfPage": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I convert HEX to RGB?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Enter your HEX code in the input and the RGB value is calculated instantly. Click Copy next to the RGB row to copy it to your clipboard."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between RGB and HSL?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RGB defines colors using red, green and blue channel values from 0 to 255. HSL defines colors using hue, saturation and lightness percentages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is CMYK used for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CMYK is used in print design. If you are sending colors to a printer or working in InDesign or Illustrator for print, you will need CMYK values."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this converter free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, completely free with no signup needed. All conversions happen instantly in your browser."
+        }
+      }
+    ]
+  }
+}} />
     </>
   );
 }

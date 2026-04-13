@@ -1,6 +1,6 @@
 // app/page.js
 import ColorPickerTool from "./components/ColorPickerTool";
-
+import JsonLd from "./components/JsonLd";
 export const metadata = {
   title: "Free Image Color Picker — Extract HEX, RGB, HSL, CMYK from Any Photo",
   description:
@@ -130,6 +130,71 @@ export default function HomePage() {
           JavaScript Canvas API. Your images are never sent to any server.
         </p>
       </section>
+
+      <JsonLd data={{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Image Color Picker",
+  "url": "https://www.img2color.com",
+  "description": "Free online image color picker. Extract HEX, RGB, HSL, CMYK color codes from any photo instantly. No signup needed.",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": ["Image Color Picker", "Color Palette Extractor", "HEX RGB HSL CMYK"],
+  "mainEntityOfPage": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I get the HEX code from an image?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Upload your image to img2color, then hover over any pixel. The HEX code appears instantly in the color panel. Click to lock it and copy the value."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this color picker free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, completely free. No signup, no limits, no watermarks. All processing happens in your browser — your images are never uploaded to any server."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What color formats does it support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "img2color shows HEX, RGB, HSL, CMYK and Lab values for every color you pick."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I extract a full color palette from a photo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Click multiple colors to build a palette, then export it as CSS variables or a PNG swatch file."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, img2color works on all devices including phones and tablets — no app install needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my image data private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Completely. All color extraction happens locally in your browser using JavaScript Canvas API. Your images are never sent to any server."
+        }
+      }
+    ]
+  }
+}} />
     </>
   );
 }
